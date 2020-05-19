@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <h1>Accueil</h1>
+
+    {# Affiche mon utilisateur : {{ dump(app.user) }} #}
+
+    <div class="row">
+        {% for product in products %}
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+{#                        <img src="{{ product.image }}" class="img-fluid" alt="{{ product.name }}">#}
+                        <h5 class="card-title">{{ product.name }}</h5>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
